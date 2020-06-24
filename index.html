@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Calculator
+        </title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="mainHeading">
+            <h1>Calculator By: <span id="name">RizwanArif</span></h1>
+        </div>
+        <div id="container">
+            <div id="calculator">
+                <div id="screen">
+                    <div id="history">
+                        <p class="historyValue"></p>
+                    </div>
+                    <div id="content">
+                        <p class="contentValue">0</p>
+                    </div>
+                </div>
+                <div id="mathKeys">
+                        <div>
+                        <button class="mathKey mod" id="%">%</button>
+                        <button class="mathKey mult" id="*">x</button>
+                        <button class="mathKey add" id="+">+</button>
+                        </div>
+                        <div>
+                        <button class="mathKey equ" id="=">=</button>
+                        <button class="mathKey divi" id="/">÷</button>
+                        <button class="mathKey sub" id="-">-</button>
+                        </div>
+                </div>
+                <div id="numberKeys">
+                    <div class="numbers">
+                        <button class="numKey" id="7">7</button>
+                        <button class="numKey" id="8">8</button>
+                        <button class="numKey" id="9">9</button>
+                    </div>
+                    <div class="numbers">
+                        <button class="numKey" id="4">4</button>
+                        <button class="numKey" id="5">5</button>
+                        <button class="numKey" id="6">6</button>
+                    </div>
+                    <div class="numbers">
+                        <button class="numKey" id="1">1</button>
+                        <button class="numKey" id="2">2</button>
+                        <button class="numKey" id="3">3</button>
+                    </div>
+                    <div class="numbers">
+                        <button class="numKey btmlft" id="clear">C</button>
+                        <button class="numKey" id="0">0</button>
+                        <button class="numKey btmrgt" id="delete">Del</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="javascript/calc.js"></script>
+    </body>
+</html>
