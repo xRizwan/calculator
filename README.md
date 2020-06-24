@@ -1,2 +1,2 @@
-# calculator
-Calculator
+# Information
+Calculator Project for theOdinProject.
