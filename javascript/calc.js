@@ -108,6 +108,7 @@ numberKeys.forEach((key) => {
                 newValue += previousValue[i];
             }
             contentValue.innerHTML = newValue;
+            totalHistory = newValue;
         }
 
         else {
