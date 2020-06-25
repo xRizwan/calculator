@@ -102,13 +102,18 @@ numberKeys.forEach((key) => {
 
         else if (e.target.id === "delete"){
             // delete the lastItem of the screen content if "Del" button was clicked
-            let previousValue = contentValue.innerHTML;
-            let newValue = '';
-            for (let i = 0; i < previousValue.length - 1; i++){
-                newValue += previousValue[i];
+            if (currentNumber) {
+                let previousValue = contentValue.textContent;
+                let newValue = '';
+                for (let i = 0; i < previousValue.length - 1; i++){
+                    newValue += previousValue[i];
+                }
+                contentValue.innerHTML = newValue;
+                console.log(newValue);
+                oldHistory = totalHistory;
+                totalHistory = oldHistory.slice(0,oldHistory.length-1);
+                console.log(totalHistory);
             }
-            contentValue.innerHTML = newValue;
-            totalHistory = newValue;
         }
 
         else {
@@ -176,4 +181,16 @@ mathKeys.forEach(function(key){
             }
         }
     })
+})
+
+// adding keyboard functionality for number keys;
+window.addEventListener("keydown", (e) => {
+    for (let i = 0; i < numberKeys.length; i++){
+        if (e.key === numberKeys[i].id){
+            currentNumber = contentValue.textContent;
+            currentNumber += e.key;
+            contentValue.textContent = currentNumber;
+            totalHistory += e.key;
+        }
+    }
 })
